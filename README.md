@@ -1,4 +1,4 @@
-# APPLS
+# ![plot](./apple.png) APPLS
 APPLS: : A Meta-evaluation Testbed for Plain Language Summarization
 
 ## Updates
