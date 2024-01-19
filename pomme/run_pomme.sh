@@ -17,7 +17,7 @@ python pomme.py \
         --outdomain_model t5 \
         --ref_prefix_src source \
         --ref_prefix_tgt target \
-        --hypo_input_path ../output/ \
+        --hypo_input_path $INPUT \
         --hypo_prefix simplification_en_de_en_gpt3_perturbation \
-        --hypo_output_path ../output/ \
+        --hypo_output_path $OUTPUT \
         --ppl_name perplexity_score

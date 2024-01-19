@@ -16,7 +16,7 @@ def inputPerplexity(text, model, tokenizer):
 
     nlls = []
     prev_end_loc = 0
-    for begin_loc in tqdm(range(0, seq_len, stride)):
+    for begin_loc in range(0, seq_len, stride):
         end_loc = min(begin_loc + max_length, seq_len)
         trg_len = end_loc - prev_end_loc  # may be different from stride on last loop
         input_ids = encodings.input_ids[:, begin_loc:end_loc].to("cuda")
@@ -46,6 +46,8 @@ def main():
     parser.add_argument('--output_path', type=str, default='../output/', help='path to the output file')
     parser.add_argument('--model', type=str, default='facebook/opt-6.7b', help='model name')
     args = parser.parse_args()
+
+    print('Generating perplexity score for model: ', args.model)
     
     if '.csv' in args.hypo_file:
         df = pd.read_csv(args.hypo_path + args.hypo_file)
@@ -78,7 +80,7 @@ def main():
         model = GPT2LMHeadModel.from_pretrained("gpt2", device_map="auto").cuda()
 
     ppl_list = []
-    for i in tqdm(range(len(perturbed_text_list))):
+    for i in range(len(perturbed_text_list)):
         idx = id_list[i]
         perturbed_text = perturbed_text_list[i]
         ppl = inputPerplexity(perturbed_text, model, tokenizer)
@@ -88,6 +90,7 @@ def main():
     df['perplexity_score'] = ppl_list
 
     df.to_csv(os.path.join(args.output_path, args.hypo_file.split('.')[0] + '_' + args.model + '_perplexity_score.csv'), index=False)
+    print('Saved to: ', os.path.join(args.output_path, args.hypo_file.split('.')[0] + '_' + args.model + '_perplexity_score.csv'))
 
 if __name__ == '__main__':
     main()
