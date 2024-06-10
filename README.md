@@ -7,8 +7,11 @@ This repository contains the code for POMME score from APPLS: : [A Meta-evaluati
 
 The goal of this repository is to assess how well existing metrics capture the multiple criteria of PLS. We identify four criteria, informed by prior work, that a PLS metric should be sensitive to: **informativeness**, **simplification**, **coherence**, and **faithfulness**. We introduce a set of perturbations to probe metric sensitivity to these criteria, where each perturbation is designed to affect a single criterion with ideally minimal impact to others.
 
-![plot](./perturbation_example.pdf)
-Example perturbations for criteria in APPLS. Original text comes from the CELLS study \cite{guo2022cells}.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{./perturbation_example.pdf}
+\caption{Example perturbations for criteria in APPLS. Original text comes from the CELLS study \cite{guo2022cells}.}
+\end{figure}
 
 ## Perturbing Your Dataset
 
