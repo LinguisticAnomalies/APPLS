@@ -79,10 +79,24 @@ For further assistance or questions, feel free to open an issue in this reposito
 
 ## Citation
 ```
-@article{guo2023appls,
-  title={APPLS: A Meta-evaluation Testbed for Plain Language Summarization},
-  author={Guo, Yue and August, Tal and Leroy, Gondy and Cohen, Trevor and Wang, Lucy Lu},
-  journal={arXiv preprint arXiv:2305.14341},
-  year={2023}
+@inproceedings{guo-etal-2024-appls,
+    title = "{APPLS}: Evaluating Evaluation Metrics for Plain Language Summarization",
+    author = "Guo, Yue  and
+      August, Tal  and
+      Leroy, Gondy  and
+      Cohen, Trevor  and
+      Wang, Lucy Lu",
+    editor = "Al-Onaizan, Yaser  and
+      Bansal, Mohit  and
+      Chen, Yun-Nung",
+    booktitle = "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2024",
+    address = "Miami, Florida, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.emnlp-main.519",
+    pages = "9194--9211",
+    abstract = "While there has been significant development of models for Plain Language Summarization (PLS), evaluation remains a challenge. PLS lacks a dedicated assessment metric, and the suitability of text generation evaluation metrics is unclear due to the unique transformations involved (e.g., adding background explanations, removing jargon). To address these questions, our study introduces a granular meta-evaluation testbed, APPLS, designed to evaluate metrics for PLS. We identify four PLS criteria from previous work{---}informativeness, simplification, coherence, and faithfulness{---}and define a set of perturbations corresponding to these criteria that sensitive metrics should be able to detect. We apply these perturbations to extractive hypotheses for two PLS datasets to form our testbed. Using APPLS, we assess performance of 14 metrics, including automated scores, lexical features, and LLM prompt-based evaluations. Our analysis reveals that while some current metrics show sensitivity to specific criteria, no single method captures all four criteria simultaneously. We therefore recommend a suite of automated metrics be used to capture PLS quality along all relevant criteria. This work contributes the first meta-evaluation testbed for PLS and a comprehensive evaluation of existing metrics.",
 }
+
 ```
