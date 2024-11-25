@@ -32,6 +32,28 @@ If you’d like to perturb your dataset to see how well existing metrics capture
      2. Change the `scientific_claim_folder` in `factual_consistency_entity_swap.py`.
      3. Run `main_entity_swap.py`.
 
+## Evaluation
+
+This project analyzes **8 established evaluation metrics**, including the **5 most commonly reported metrics** in ACL'22 summarization and generation papers. Additionally, we assess **5 lexical features** associated with text simplification and perform **LLM-based evaluations**.
+
+---
+
+### Lexical Features
+To evaluate lexical features, use the script: ./evaluation/lexical_features/eval_difficulty.py
+
+#### Specificity Calculation
+For the **specificity** metric among lexical features, we utilize **Speciteller**, a domain-agnostic tool to compute the specificity of terms in a paragraph. You can find Speciteller here: [https://github.com/jjessyli/speciteller](https://github.com/jjessyli/speciteller).
+
+---
+
+### LLM-Based Evaluation
+To conduct LLM-based evaluations, execute the following script: ./evaluation/gpt/run_gpt.sh
+
+#### Instructions
+1. Modify the code path in `run_gpt.sh` to match your environment.
+2. Enter your API key in the `utils` file to enable GPT-based evaluations.
+
+
 ## POMME score
 1. Begin by cloning this repository. Then, install the necessary packages listed in requirements.txt by creating a Conda environment:
 ```
