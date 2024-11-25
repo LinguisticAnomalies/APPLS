@@ -1,7 +1,14 @@
 # ![plot](./apple.png) APPLS
-This repository contains the code for POMME score from APPLS: : [A Meta-evaluation Testbed for Plain Language Summarization](https://arxiv.org/pdf/2305.14341.pdf).
+Welcome to the repository for **APPLS**, which provides code for constructing a testbed and performing evaluation for the paper:  
+[**APPLS: Evaluating Evaluation Metrics for Plain Language Summarization**](https://aclanthology.org/2024.emnlp-main.519/).
+
+---
 
 ## Updates
+- **Nov 24, 2024**: Added lexical features and LLM-based evaluation codes.
+- **Sep 20, 2024**: Our paper has been accepted to EMNLP 2024 (Main Conference)!
+
+---
 
 ## Overview
 
